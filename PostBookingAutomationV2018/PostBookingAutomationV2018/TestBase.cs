@@ -4,23 +4,27 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace PostBookingAutomationV2018
+namespace PostBookingV2018
 {
-    [TestClass]
+    
     public class TestBase
     {
-        IWebDriver driver; 
+        public IWebDriver driver = new ChromeDriver();
 
         [OneTimeSetUp]
-        public void Initialize()
+        public void OneTimeSetup()
         {
-            driver = new ChromeDriver();
-            driver.Url = "https://www.119.test/EN/secure/MyEasyJet.mvc/SignIn";
+            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/SignIn");
             //driver.Url = "https://www.119.test/TestPages/HomePage.html?lang=EN";
 
             //driver.FindElement(By.CssSelector("div[a href='https://www.119.test/EN/secure/MyEasyJet.mvc/SignIn']"));
 
+        }
 
+        [TearDown]
+        public void TearDown()
+        {
+            //driver.Manage().Cookies.DeleteAllCookies();
         }
 
         [OneTimeTearDown]

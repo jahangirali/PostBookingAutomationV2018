@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace PostBookingAutomationV2018.Pages
+namespace PostBookingV2018.Pages
 {
     public class LoginPage
     {
