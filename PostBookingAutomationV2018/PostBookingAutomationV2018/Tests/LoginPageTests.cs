@@ -7,12 +7,16 @@ using NUnit.Framework;
 using NUnit.Framework.Internal;
 using OpenQA.Selenium.Chrome;
 using PostBookingV2018.Pages;
+using OpenQA.Selenium;
+
 
 namespace PostBookingV2018.Tests
 {
+    [TestFixture]
     public class LoginPageTests: TestBase
     {
-        public class LoginTests
+        
+        public class LoginTests: TestBase
         {
             [Test]
             public void Login()

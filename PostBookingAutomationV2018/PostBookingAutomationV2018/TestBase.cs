@@ -16,7 +16,6 @@ namespace PostBookingV2018
         {
             driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/SignIn");
             //driver.Url = "https://www.119.test/TestPages/HomePage.html?lang=EN";
-
             //driver.FindElement(By.CssSelector("div[a href='https://www.119.test/EN/secure/MyEasyJet.mvc/SignIn']"));
 
         }
