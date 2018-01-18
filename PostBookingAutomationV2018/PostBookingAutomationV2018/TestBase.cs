@@ -29,7 +29,7 @@ namespace PostBookingV2018
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
-            driver.Quit();
+           // driver.Quit();
         }
     }
 }

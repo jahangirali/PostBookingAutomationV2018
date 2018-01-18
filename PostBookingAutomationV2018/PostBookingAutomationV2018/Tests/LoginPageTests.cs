@@ -8,6 +8,7 @@ using NUnit.Framework.Internal;
 using OpenQA.Selenium.Chrome;
 using PostBookingV2018.Pages;
 using OpenQA.Selenium;
+using PostBookingAutomationV2018.Pages;
 
 
 namespace PostBookingV2018.Tests
@@ -19,12 +20,17 @@ namespace PostBookingV2018.Tests
         public class LoginTests: TestBase
         {
             [Test]
-            public void Login()
+            public void ViewMyBookings()
             {
                 var loginPage = new LoginPage(driver);
 
                 loginPage.LoggedIn();
+
+                var viewBookingsPage = new ViewBookingsPage(driver);
+                viewBookingsPage.ClickMyBookings();
+
             }
+
         }
     }
 }
