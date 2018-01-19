@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using NUnit.Framework.Internal;
-using OpenQA.Selenium.Chrome;
+﻿using NUnit.Framework;
 using PostBookingV2018.Pages;
-using OpenQA.Selenium;
 using PostBookingAutomationV2018.Pages;
 
 
@@ -27,6 +19,7 @@ namespace PostBookingV2018.Tests
                 loginPage.LoggedIn();
 
                 var viewBookingsPage = new ViewBookingsPage(driver);
+                //Thread.Sleep(10);
                 viewBookingsPage.ClickMyBookings();
 
             }

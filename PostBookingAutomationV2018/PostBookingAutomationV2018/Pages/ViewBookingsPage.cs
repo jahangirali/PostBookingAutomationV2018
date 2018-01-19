@@ -11,7 +11,7 @@ namespace PostBookingAutomationV2018.Pages
     public class ViewBookingsPage
     {
         private IWebDriver Driver { get; }
-        private static readonly By PageSelector = By.Id("YourBookingsLinkBreadcrumb");
+        private static readonly By PageSelector = By.CssSelector("a[id='YourBookingsLinkBreadcrumb']");
 
         public ViewBookingsPage(IWebDriver driver)
         {
@@ -19,7 +19,7 @@ namespace PostBookingAutomationV2018.Pages
             
         }
 
-        [FindsBy(How = How.Id, Using = "YourBookingsLinkBreadcrumb")] private IWebElement AllBookings;
+        [FindsBy(How = How.CssSelector, Using = "YourBookingsLinkBreadcrumb")] private IWebElement AllBookings;
 
         public void ClickMyBookings()
         {
