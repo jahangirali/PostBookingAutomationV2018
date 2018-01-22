@@ -15,13 +15,21 @@ namespace PostBookingV2018.Tests
             public void ViewMyBookings()
             {
                 var loginPage = new LoginPage(driver);
-
                 loginPage.LoggedIn();
 
                 var viewBookingsPage = new ViewBookingsPage(driver);
-                //Thread.Sleep(10);
                 viewBookingsPage.ClickMyBookings();
 
+            }
+
+            [Test]
+            public void ViewAccountDetails()
+            {
+                var loginPage = new LoginPage(driver);
+                loginPage.LoggedIn();
+
+                var accountDetailsPage = new AccountDetailsPage(driver);
+                accountDetailsPage.ClickAccountDetails();
             }
 
         }
