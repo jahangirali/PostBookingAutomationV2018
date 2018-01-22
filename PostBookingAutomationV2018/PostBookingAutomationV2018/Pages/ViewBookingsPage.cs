@@ -21,11 +21,19 @@ namespace PostBookingAutomationV2018.Pages
         }
 
         [FindsBy(How = How.CssSelector, Using = "a[id='YourBookingsLinkBreadcrumb']")] private IWebElement AllBookings;
+        [FindsBy(How = How.CssSelector, Using = "a[id='emailBookingLink']")] private IWebElement EmailMeTheseLink;
 
         public void ClickMyBookings()
         {
             Thread.Sleep(10);
             AllBookings.Click();
+        }
+
+        public void ClickEmailMeTheseLink()
+        {
+            EmailMeTheseLink.Click();
+            Driver.Navigate().Back();
+           
         }
     }
    

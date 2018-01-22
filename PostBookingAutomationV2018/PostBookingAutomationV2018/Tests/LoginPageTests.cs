@@ -32,6 +32,19 @@ namespace PostBookingV2018.Tests
                 accountDetailsPage.ClickAccountDetails();
             }
 
+            [Test]
+            public void EmailMeTheseDetails()
+            {
+                var loginPage = new LoginPage(driver);
+                loginPage.LoggedIn();
+
+                var viewBookingsPage = new ViewBookingsPage(driver);
+                viewBookingsPage.ClickEmailMeTheseLink();
+            }
+
+            
+            
+
         }
     }
 }
