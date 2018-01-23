@@ -46,6 +46,9 @@ namespace PostBookingV2018.Tests
             
             var viewBookingsPage = new ViewBookingsPage(driver);
             viewBookingsPage.ClickCheckInButton();
+
+            var checkInPage = new CheckInPage(driver);
+            checkInPage.ClickManageBookingsButton();
         }
 
 

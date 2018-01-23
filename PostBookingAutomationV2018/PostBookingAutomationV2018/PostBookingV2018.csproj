@@ -66,6 +66,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Pages\AccountDetailsPage.cs" />
+    <Compile Include="Pages\CheckInPage.cs" />
     <Compile Include="Pages\ConfirmEmailPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\ViewBookingsPage.cs" />
