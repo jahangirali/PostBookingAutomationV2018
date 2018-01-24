@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace PostBookingAutomationV2018.Pages
+namespace Selenium.Pages
 {
     public class ConfirmEmailPage
     {

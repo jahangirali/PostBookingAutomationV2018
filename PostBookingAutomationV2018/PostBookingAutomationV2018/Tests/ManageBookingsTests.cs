@@ -1,7 +1,8 @@
 ﻿using System.Threading;
 using NUnit.Framework;
+using Selenium;
 using PostBookingV2018.Pages;
-using PostBookingAutomationV2018.Pages;
+using Selenium.Pages;
 
 
 namespace PostBookingV2018.Tests
@@ -12,8 +13,7 @@ namespace PostBookingV2018.Tests
         [SetUp]
         public void Setup()
         {
-            var loginPage = new LoginPage(driver);
-            loginPage.LoggedIn();
+            LoginHelper.LogIn(driver);
         }
 
         [Test]
