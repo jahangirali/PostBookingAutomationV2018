@@ -23,6 +23,8 @@ namespace PostBookingAutomationV2018.Pages
         [FindsBy(How = How.CssSelector, Using = "a[id='YourBookingsLinkBreadcrumb']")] private IWebElement AllBookings;
         [FindsBy(How = How.CssSelector, Using = "a[id='emailBookingLink']")] private IWebElement EmailMeTheseLink;
         [FindsBy(How = How.CssSelector, Using = "button[name='BoardingPassAndCheckin']")] private IWebElement BoardingPassCheckInButton;
+        [FindsBy(How = How.CssSelector, Using = "div[class='booking-panel-button']")] private IWebElement PrintAllBoardingPassButton;
+
 
         public void ClickMyBookings()
         {
@@ -40,6 +42,11 @@ namespace PostBookingAutomationV2018.Pages
         public void ClickCheckInButton()
         {
             BoardingPassCheckInButton.Click();
+        }
+
+        public void ClickPrintAllBoardingPassesButton()
+        {
+            PrintAllBoardingPassButton.Click();
         }
     }
    

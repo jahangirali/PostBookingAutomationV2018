@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Threading;
+using NUnit.Framework;
 using PostBookingV2018.Pages;
 using PostBookingAutomationV2018.Pages;
 
@@ -41,11 +42,14 @@ namespace PostBookingV2018.Tests
         }
 
         [Test]
-        public void CheckIn()
+        public void CheckInAllPassengers()
         {
             
             var viewBookingsPage = new ViewBookingsPage(driver);
             viewBookingsPage.ClickCheckInButton();
+            Thread.Sleep(15);
+            viewBookingsPage.ClickPrintAllBoardingPassesButton();
+            
 
             var checkInPage = new CheckInPage(driver);
             checkInPage.ClickManageBookingsButton();
