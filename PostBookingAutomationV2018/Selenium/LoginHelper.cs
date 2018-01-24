@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using PostBookingV2018.Pages;
+using Selenium.Pages;
 
 namespace Selenium
 {
@@ -17,9 +18,10 @@ namespace Selenium
             loginPage.LoggedIn();
         }
 
-        public static void LogOut()
+        public static void LogOut(IWebDriver driver)
         {
-            
+            var viewBookingPage = new ViewBookingsPage(driver);
+            viewBookingPage.ClickLogOutButton();
         }
     }
 }

@@ -23,7 +23,12 @@ namespace Selenium.Pages
         [FindsBy(How = How.CssSelector, Using = "a[id='YourBookingsLinkBreadcrumb']")] private IWebElement AllBookings;
         [FindsBy(How = How.CssSelector, Using = "a[id='emailBookingLink']")] private IWebElement EmailMeTheseLink;
         [FindsBy(How = How.CssSelector, Using = "button[name='BoardingPassAndCheckin']")] private IWebElement BoardingPassCheckInButton;
-        [FindsBy(How = How.CssSelector, Using = "div[class='booking-panel-button']")] private IWebElement PrintAllBoardingPassButton;
+        [FindsBy(How = How.CssSelector, Using = "button[class='appear-clickable checkinButton orange-panel reprint-button-state']")] private IWebElement PrintAllBoardingPassButton;
+        [FindsBy(How = How.CssSelector, Using = "a[title='Sign out']")] private IWebElement LogOutButton;
+        [FindsBy(How = How.CssSelector, Using = "a[title='Sign out']")] private IWebElement ImportantInformationLink;
+        [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  ChangeName']")] private IWebElement ChangeNameButton;
+        [FindsBy(How = How.CssSelector, Using = "a[href^='http://www.easyjet.com/en/flight-tracker/5500']")] private IWebElement CheckFlightStatus;
+
 
 
         public void ClickMyBookings()
@@ -47,6 +52,26 @@ namespace Selenium.Pages
         public void ClickPrintAllBoardingPassesButton()
         {
             PrintAllBoardingPassButton.Click();
+        }
+
+        public void ClickImportantInformationLink()
+        {
+            ImportantInformationLink.Click();
+        }
+
+        public void ClickLogOutButton()
+        {
+            LogOutButton.Click();
+        }
+
+        public void ClickChangeNameButton()
+        {
+            ChangeNameButton.Click();
+        }
+
+        public void ClickFlightStatus()
+        {
+            CheckFlightStatus.Click();
         }
     }
    
