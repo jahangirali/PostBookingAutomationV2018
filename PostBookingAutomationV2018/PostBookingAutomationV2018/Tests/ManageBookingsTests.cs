@@ -71,6 +71,9 @@ namespace PostBookingV2018.Tests
         {
             var viewBookingsPage = new ViewBookingsPage(driver);
             viewBookingsPage.ClickChangeNameButton();
+
+            var changeNamePage = new ChangeNamePage(driver);
+            changeNamePage.ChangeName();
         }
 
         [Test]
@@ -90,7 +93,7 @@ namespace PostBookingV2018.Tests
         [TearDown]
         public void TearDown()
         {
-            driver.Quit();
+            //driver.Quit();
             //driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/SignIn");
         }
 
