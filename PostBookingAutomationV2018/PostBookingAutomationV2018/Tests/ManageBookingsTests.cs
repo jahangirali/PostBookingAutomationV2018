@@ -70,10 +70,15 @@ namespace PostBookingV2018.Tests
         public void ChangeName()
         {
             var viewBookingsPage = new ViewBookingsPage(driver);
+            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/ViewBooking?bookingReference=E1111HR");
+            Thread.Sleep(10);
             viewBookingsPage.ClickChangeNameButton();
 
             var changeNamePage = new ChangeNamePage(driver);
             changeNamePage.ChangeName();
+
+            var upSellPaymentsPage = new UpSellPaymentPage(driver);
+            upSellPaymentsPage.EnterCardDetailsName();
         }
 
         [Test]

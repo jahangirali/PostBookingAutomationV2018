@@ -57,6 +57,7 @@
     <Compile Include="Pages\CheckInPage.cs" />
     <Compile Include="Pages\ConfirmEmailPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\UpSellPaymentPage.cs" />
     <Compile Include="Pages\ViewBookingsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -12,7 +12,7 @@ namespace Selenium.Pages
     public class ChangeNamePage
     {
         private IWebDriver Driver { get; }
-        //private static readonly By PageSelector = By.CssSelector("a[id='ContactDetailsLinkBreadcrumb']");
+        
 
         public ChangeNamePage(IWebDriver driver)
         {
