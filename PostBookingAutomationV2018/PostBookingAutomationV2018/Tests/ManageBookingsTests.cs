@@ -79,6 +79,9 @@ namespace PostBookingV2018.Tests
 
             var upSellPaymentsPage = new UpSellPaymentPage(driver);
             upSellPaymentsPage.EnterCardDetailsName();
+
+           
+
         }
 
         [Test]

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 
 namespace Selenium.Pages
 {
@@ -23,7 +24,7 @@ namespace Selenium.Pages
         [FindsBy(How = How.CssSelector, Using = "select[name='cardType']")] private IWebElement TypeOfCardList;
         [FindsBy(How = How.CssSelector, Using = "input[name='numOfCard']")] private IWebElement CardNumberField;
         [FindsBy(How = How.CssSelector, Using = "input[name='securityCode']")] private IWebElement SecurityCodeField;
-        [FindsBy(How = How.CssSelector, Using = "input[name='nameOnCard']")] private IWebElement ExpiryMonthList;
+        [FindsBy(How = How.CssSelector, Using = "select[name='cardMonth']")] private IWebElement ExpiryMonthList;
         [FindsBy(How = How.CssSelector, Using = "input[name='nameOnCard']")] private IWebElement ExpiryYearList;
         [FindsBy(How = How.CssSelector, Using = "input[name='terms']")] private IWebElement TCsCheckBox;
         [FindsBy(How = How.CssSelector, Using = "input[name='memPassword']")] private IWebElement MemberAccountPassword;
@@ -38,12 +39,21 @@ namespace Selenium.Pages
             TypeOfCardList.SendKeys(Keys.ArrowDown);
             CardNumberField.SendKeys("4111111111111111");
             SecurityCodeField.SendKeys("737");
+            EnterMonthExpiry("08");
             TCsCheckBox.Click();
             MemberAccountPassword.SendKeys("password123");
             PayNowButton.Click();
-            Driver.SwitchTo().ActiveElement().Click();
+            var a = Driver.SwitchTo().Alert();
+            a.Accept();
+            
+
+        }
 
 
+        private void EnterMonthExpiry(string month)
+        {
+            SelectElement monthExpiryList = new SelectElement(ExpiryMonthList);
+            monthExpiryList.SelectByValue(month);
         }
     }
 }
