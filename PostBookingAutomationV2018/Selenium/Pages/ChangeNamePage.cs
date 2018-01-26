@@ -39,14 +39,14 @@ namespace Selenium.Pages
         private void EnterFirstNameField()
         {
             FirstNameField.Clear();
-            FirstNameField.SendKeys("Jeff");
+            FirstNameField.SendKeys("Ned");
 
         }
 
         private void EnterLastNameField()
         {
             LastNameField.Clear();
-            LastNameField.SendKeys("Jefferson");
+            LastNameField.SendKeys("Stark");
         }
 
         private void ClickContinue()

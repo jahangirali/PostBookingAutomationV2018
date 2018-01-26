@@ -25,7 +25,7 @@ namespace Selenium.Pages
         [FindsBy(How = How.CssSelector, Using = "input[name='numOfCard']")] private IWebElement CardNumberField;
         [FindsBy(How = How.CssSelector, Using = "input[name='securityCode']")] private IWebElement SecurityCodeField;
         [FindsBy(How = How.CssSelector, Using = "select[name='cardMonth']")] private IWebElement ExpiryMonthList;
-        [FindsBy(How = How.CssSelector, Using = "input[name='nameOnCard']")] private IWebElement ExpiryYearList;
+        [FindsBy(How = How.CssSelector, Using = "select[name='cardYear']")] private IWebElement ExpiryYearList;
         [FindsBy(How = How.CssSelector, Using = "input[name='terms']")] private IWebElement TCsCheckBox;
         [FindsBy(How = How.CssSelector, Using = "input[name='memPassword']")] private IWebElement MemberAccountPassword;
         [FindsBy(How = How.CssSelector, Using = "input[name='btn_Back']")] private IWebElement CancelButton;
@@ -36,24 +36,35 @@ namespace Selenium.Pages
         {
             CardholderNameField.SendKeys("mr t");
             TypeOfCardList.Click();
-            TypeOfCardList.SendKeys(Keys.ArrowDown);
+            //TypeOfCardList.SendKeys(Keys.ArrowDown);
+            EnterCardType("9");
             CardNumberField.SendKeys("4111111111111111");
             SecurityCodeField.SendKeys("737");
             EnterMonthExpiry("08");
+            EnterYearExpiry("2018");
             TCsCheckBox.Click();
             MemberAccountPassword.SendKeys("password123");
             PayNowButton.Click();
             var a = Driver.SwitchTo().Alert();
-            a.Accept();
-            
-
+            //a.Accept();
+            a.Dismiss();
         }
 
-
+        private void EnterCardType(string cardType)
+        {
+            SelectElement cardTypeList = new SelectElement(TypeOfCardList);
+            cardTypeList.SelectByValue(cardType);
+        }
         private void EnterMonthExpiry(string month)
         {
             SelectElement monthExpiryList = new SelectElement(ExpiryMonthList);
             monthExpiryList.SelectByValue(month);
+        }
+
+        private void EnterYearExpiry(string year)
+        {
+            SelectElement yearExpiryList = new SelectElement(ExpiryYearList);
+            yearExpiryList.SelectByValue(year);
         }
     }
 }
