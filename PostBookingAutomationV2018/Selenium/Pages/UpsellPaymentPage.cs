@@ -36,7 +36,6 @@ namespace Selenium.Pages
         {
             CardholderNameField.SendKeys("mr t");
             TypeOfCardList.Click();
-            //TypeOfCardList.SendKeys(Keys.ArrowDown);
             EnterCardType("9");
             CardNumberField.SendKeys("4111111111111111");
             SecurityCodeField.SendKeys("737");
