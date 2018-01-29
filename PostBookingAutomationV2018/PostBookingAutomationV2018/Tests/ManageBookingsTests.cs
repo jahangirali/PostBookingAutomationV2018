@@ -70,7 +70,7 @@ namespace PostBookingV2018.Tests
         public void ChangeName()
         {
             var viewBookingsPage = new ViewBookingsPage(driver);
-            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/ViewBooking?bookingReference=E1111HR");
+            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/ViewBooking?bookingReference=E1111HW");
             Thread.Sleep(10);
             viewBookingsPage.ClickChangeNameButton();
 
@@ -87,12 +87,18 @@ namespace PostBookingV2018.Tests
         public void ChangeFlight()
         {
             var viewBookingsPage = new ViewBookingsPage(driver);
-            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/ViewBooking?bookingReference=E1111HR");
+            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/ViewBooking?bookingReference=E1111HW");
             Thread.Sleep(10);
             viewBookingsPage.ClickChangeFlightButton();
 
             var changeFlightPage = new ChangeFlightPage(driver);
             changeFlightPage.EnterFlightDetails(); 
+
+            var changeFlightOptionsPage = new ChangeFlightOptionsPage(driver);
+            changeFlightOptionsPage.SelectAvailableFlight();
+
+            var upSellPaymentsPage = new UpSellPaymentPage(driver);
+            upSellPaymentsPage.EnterCardDetailsName();
         }
 
 

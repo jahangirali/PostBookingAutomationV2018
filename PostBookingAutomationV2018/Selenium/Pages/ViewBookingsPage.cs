@@ -30,7 +30,6 @@ namespace Selenium.Pages
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  ChangeName']")] private IWebElement ChangeNameButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  SelectSeats']")] private IWebElement SelectSeatsButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  AddHoldItems']")] private IWebElement AddHoldItemsButton;
-
         [FindsBy(How = How.CssSelector, Using = "a[href^='http://www.easyjet.com/en/flight-tracker/5500']")] private IWebElement CheckFlightStatus;
 
 

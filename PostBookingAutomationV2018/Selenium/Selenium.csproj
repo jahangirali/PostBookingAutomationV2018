@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="LoginHelper.cs" />
     <Compile Include="Pages\AccountDetailsPage.cs" />
+    <Compile Include="Pages\ChangeFlightOptionsPage.cs" />
     <Compile Include="Pages\ChangeFlightPage.cs" />
     <Compile Include="Pages\ChangeNamePage.cs" />
     <Compile Include="Pages\CheckInPage.cs" />

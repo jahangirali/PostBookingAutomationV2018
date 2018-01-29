@@ -45,8 +45,8 @@ namespace Selenium.Pages
             MemberAccountPassword.SendKeys("password123");
             PayNowButton.Click();
             var a = Driver.SwitchTo().Alert();
-            //a.Accept();
-            a.Dismiss();
+            a.Accept();
+            //a.Dismiss();
         }
 
         private void EnterCardType(string cardType)

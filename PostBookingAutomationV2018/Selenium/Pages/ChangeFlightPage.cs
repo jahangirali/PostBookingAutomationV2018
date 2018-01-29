@@ -27,7 +27,7 @@ namespace Selenium.Pages
 
         public void EnterFlightDetails()
         {
-            EnterFlyingOutDay("01");
+            EnterFlyingOutDay("28");
             EnterFlyingOutMonthYear("022018");
             SearchNewFlightsButton.Click();
         }
