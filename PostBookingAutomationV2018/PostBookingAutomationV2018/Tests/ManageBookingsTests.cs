@@ -48,7 +48,7 @@ namespace PostBookingV2018.Tests
             
             var viewBookingsPage = new ViewBookingsPage(driver);
             viewBookingsPage.ClickMyBookings();
-            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/ViewBooking?bookingReference=E1111HP");
+            driver.Navigate().GoToUrl("https://www.119.test/EN/secure/MyEasyJet.mvc/ViewBooking?bookingReference=E1111HW");
             viewBookingsPage.ClickCheckInButton();
             Thread.Sleep(5);
             viewBookingsPage.ClickPrintAllBoardingPassesButton();
@@ -99,6 +99,14 @@ namespace PostBookingV2018.Tests
 
             var upSellPaymentsPage = new UpSellPaymentPage(driver);
             upSellPaymentsPage.EnterCardDetailsName();
+        }
+
+        [Test]
+        public void AlwaysCheaperText()
+        {
+            var viewBookingsPage = new ViewBookingsPage(driver);
+            viewBookingsPage.ClickSelectSeatsButton();
+
         }
 
 

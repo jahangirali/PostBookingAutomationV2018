@@ -30,7 +30,7 @@ namespace Selenium.Pages
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  ChangeName']")] private IWebElement ChangeNameButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  SelectSeats']")] private IWebElement SelectSeatsButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  AddHoldItems']")] private IWebElement AddHoldItemsButton;
-        [FindsBy(How = How.CssSelector, Using = "a[href^='http://www.easyjet.com/en/flight-tracker/5500']")] private IWebElement CheckFlightStatus;
+        [FindsBy(How = How.CssSelector, Using = "a[href^='http://www.easyjet.com/en/flight-tracker/']")] private IWebElement CheckFlightStatus;
 
 
 
@@ -77,9 +77,15 @@ namespace Selenium.Pages
             ChangeNameButton.Click();
         }
 
+        public void ClickSelectSeatsButton()
+        {
+            SelectSeatsButton.Click();
+        }
+
         public void ClickFlightStatus()
         {
-            CheckFlightStatus.Click();
+            //CheckFlightStatus.Click();
+            Driver.Navigate().GoToUrl("http://www.easyjet.com/en/flight-tracker/");
         }
     }
    
