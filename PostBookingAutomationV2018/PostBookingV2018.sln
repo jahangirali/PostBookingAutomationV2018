@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostBookingV2018", "PostBoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pages", "Selenium\Pages.csproj", "{5D894901-2939-494F-8AB0-B408A7B1C3B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlow", "SpecFlow\SpecFlow.csproj", "{C52D1AA5-631C-4548-8E7B-8D26474B4EF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBSpecFlow", "PBSpecFlow\PBSpecFlow.csproj", "{AB17896B-1750-4954-AD64-AFBEE944FC0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{5D894901-2939-494F-8AB0-B408A7B1C3B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D894901-2939-494F-8AB0-B408A7B1C3B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D894901-2939-494F-8AB0-B408A7B1C3B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C52D1AA5-631C-4548-8E7B-8D26474B4EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C52D1AA5-631C-4548-8E7B-8D26474B4EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C52D1AA5-631C-4548-8E7B-8D26474B4EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C52D1AA5-631C-4548-8E7B-8D26474B4EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB17896B-1750-4954-AD64-AFBEE944FC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB17896B-1750-4954-AD64-AFBEE944FC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB17896B-1750-4954-AD64-AFBEE944FC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB17896B-1750-4954-AD64-AFBEE944FC0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

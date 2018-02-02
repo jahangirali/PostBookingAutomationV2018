@@ -23,5 +23,3 @@ Examples:
 | NL       | Altijd goedkoper online          |
 | PL       | Zawsze taniej przez Internet     |
 | PT       | Sempre mais barato online        |
-
-
