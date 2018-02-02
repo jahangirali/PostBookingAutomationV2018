@@ -70,9 +70,9 @@
     <Compile Include="Tests\ManageBookingsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Selenium\Selenium.csproj">
+    <ProjectReference Include="..\Selenium\Pages.csproj">
       <Project>{5d894901-2939-494f-8ab0-b408a7b1c3b4}</Project>
-      <Name>Selenium</Name>
+      <Name>Pages</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

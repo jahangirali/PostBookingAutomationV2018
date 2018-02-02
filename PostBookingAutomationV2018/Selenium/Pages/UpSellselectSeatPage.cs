@@ -20,11 +20,14 @@ namespace Selenium.Pages
 
         [FindsBy(How = How.CssSelector, Using = "span[class='saveOnline']")] private IWebElement AlwaysCheaperOnlineLabel;
 
-        public string AlwaysCheaperOnlineText(String labelText)
+        public string AlwaysCheaperOnlineText()
         {
-            AlwaysCheaperOnlineLabel.GetCssValue(labelText);
-            Console.WriteLine(labelText);
-            return labelText;
+            //labelText = AlwaysCheaperOnlineLabel.Text;
+            //Console.WriteLine(labelText);
+            //return labelText;
+            
+            return AlwaysCheaperOnlineLabel.Text.Trim();
+            
         }
     }
 

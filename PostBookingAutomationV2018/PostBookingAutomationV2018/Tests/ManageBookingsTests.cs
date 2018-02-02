@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using Selenium;
@@ -106,7 +107,12 @@ namespace PostBookingV2018.Tests
         {
             var viewBookingsPage = new ViewBookingsPage(driver);
             viewBookingsPage.ClickSelectSeatsButton();
+            var upsellSelectSeatsPage = new UpSellSelectSeatPage(driver);
+            var alwaysCheaper = upsellSelectSeatsPage.AlwaysCheaperOnlineText();
+            Console.WriteLine(alwaysCheaper);
 
+            Assert.That(alwaysCheaper, Is.EqualTo("Always cheaper online"));
+        
         }
 
 
