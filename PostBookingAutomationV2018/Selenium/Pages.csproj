@@ -60,6 +60,7 @@
     <Compile Include="Pages\ConfirmEmailPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\UpSellPaymentPage.cs" />
+    <Compile Include="Pages\UpSellSeatPanelSelectorPage.cs" />
     <Compile Include="Pages\UpSellSelectSeatPage.cs" />
     <Compile Include="Pages\ViewBookingsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
