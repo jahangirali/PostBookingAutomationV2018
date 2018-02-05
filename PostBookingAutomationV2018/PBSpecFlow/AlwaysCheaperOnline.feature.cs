@@ -63,7 +63,7 @@ namespace PBSpecFlow
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void AddTwoNumbers(string language, string text, string[] exampleTags)
+        public virtual void VerifyTextAlwaysCheaperOnline(string language, string text, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "mytag"};
@@ -71,7 +71,7 @@ namespace PBSpecFlow
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify text \'Always Cheaper Online\'", @__tags);
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -84,120 +84,12 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, CA", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_CA()
+        [TechTalk.SpecRun.ScenarioAttribute("Verify text \'Always Cheaper Online\', EN", new string[] {
+                "mytag"}, SourceLine=17)]
+        public virtual void VerifyTextAlwaysCheaperOnline_EN()
         {
 #line 7
-this.AddTwoNumbers("CA", "En línia, sempre és més econòmic", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, CS", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_CS()
-        {
-#line 7
-this.AddTwoNumbers("CS", "Online vždy levněji", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, DA", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_DA()
-        {
-#line 7
-this.AddTwoNumbers("DA", "Altid billigere online", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, DE", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_DE()
-        {
-#line 7
-this.AddTwoNumbers("DE", "Online immer günstiger", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, EL", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_EL()
-        {
-#line 7
-this.AddTwoNumbers("EL", "Πάντα πιο φθηνά online", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, EN", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_EN()
-        {
-#line 7
-this.AddTwoNumbers("EN", "Always cheaper online", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, ES", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_ES()
-        {
-#line 7
-this.AddTwoNumbers("ES", "Más económico en línea", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, FR", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_FR()
-        {
-#line 7
-this.AddTwoNumbers("FR", "Toujours moins cher en ligne !", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, HU", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_HU()
-        {
-#line 7
-this.AddTwoNumbers("HU", "Online mindig olcsóbb", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, IT", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_IT()
-        {
-#line 7
-this.AddTwoNumbers("IT", "Sempre più economico online", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, NL", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_NL()
-        {
-#line 7
-this.AddTwoNumbers("NL", "Altijd goedkoper online", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, PL", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_PL()
-        {
-#line 7
-this.AddTwoNumbers("PL", "Zawsze taniej przez Internet", ((string[])(null)));
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, PT", new string[] {
-                "mytag"}, SourceLine=12)]
-        public virtual void AddTwoNumbers_PT()
-        {
-#line 7
-this.AddTwoNumbers("PT", "Sempre mais barato online", ((string[])(null)));
+this.VerifyTextAlwaysCheaperOnline("EN", "Always cheaper online", ((string[])(null)));
 #line hidden
         }
         

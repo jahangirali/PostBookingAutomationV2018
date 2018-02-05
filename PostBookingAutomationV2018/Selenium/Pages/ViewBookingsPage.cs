@@ -20,7 +20,7 @@ namespace Selenium.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.CssSelector, Using = "a[id='YourBookingsLinkBreadcrumb']")] private IWebElement AllBookings;
+        [FindsBy(How = How.Id, Using = "YourBookingsLinkBreadcrumb")] private IWebElement AllBookings;
         [FindsBy(How = How.CssSelector, Using = "a[id='emailBookingLink']")] private IWebElement EmailMeTheseLink;
         [FindsBy(How = How.CssSelector, Using = "button[name='BoardingPassAndCheckin']")] private IWebElement BoardingPassCheckInButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='appear-clickable checkinButton orange-panel reprint-button-state']")] private IWebElement PrintAllBoardingPassButton;
@@ -31,8 +31,12 @@ namespace Selenium.Pages
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  SelectSeats']")] private IWebElement SelectSeatsButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='WhiteBlueButtonModern  AddHoldItems']")] private IWebElement AddHoldItemsButton;
         [FindsBy(How = How.CssSelector, Using = "a[href^='http://www.easyjet.com/en/flight-tracker/']")] private IWebElement CheckFlightStatus;
+        [FindsBy(How = How.CssSelector, Using = "#allBookingItems h2")] private IList<IWebElement> BookingRefs;
 
-
+        public string GetFirstBookingRef()
+        {
+            return BookingRefs.First().Text;
+        }
 
         public void ClickMyBookings()
         {
