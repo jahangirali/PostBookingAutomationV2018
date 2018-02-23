@@ -14,11 +14,11 @@ namespace Selenium.Pages
         private static readonly By PageSelector = By.CssSelector("a[id='ContactDetailsLinkBreadcrumb']");
     }
 
-    public ViewBookingsPage(IWebDriver driver)
-    {
-        Driver = driver;
-        PageFactory.InitElements(driver, this);
-    }
+    //public ViewBookingsPage(IWebDriver driver)
+    //{
+    //    //Driver = driver;
+    //    //PageFactory.InitElements(driver, this);
+    //}
 
-    [FindsBy(How = How.Id, Using = "YourBookingsLinkBreadcrumb")] private IWebElement AllBookings;
+    //[FindsBy(How = How.Id, Using = "YourBookingsLinkBreadcrumb")] private IWebElement AllBookings;
 }
