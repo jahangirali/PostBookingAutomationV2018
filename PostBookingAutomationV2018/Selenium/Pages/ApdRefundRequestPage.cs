@@ -11,7 +11,7 @@ namespace Selenium.Pages
     public class ApdRefundRequestPage
     {
         private IWebDriver Driver { get; }
-        private static readonly By PageSelector = By.CssSelector("div[id=LogOnPanel']");
+        private static readonly By PageSelector = By.Id("BookingDetails_BookingReference");
 
         public ApdRefundRequestPage(IWebDriver driver)
         {
@@ -30,10 +30,23 @@ namespace Selenium.Pages
         [FindsBy(How = How.Id, Using = "ClaimantDetails_TelephoneNumber")] private IWebElement ClaimantTelephoneNumberField;
         [FindsBy(How = How.Id, Using = "Flight_FlightNumber")] private IWebElement FlightNumberField;
 
+        [FindsBy(How = How.CssSelector, Using = "span[id='allPassengers']")] private IWebElement AllPassengersRadioButton;
+        [FindsBy(How = How.CssSelector, Using = "span[id='allPassengers']")] private IWebElement AcceptTermsCheckbox;
+
+        [FindsBy(How = How.Id, Using = "Sumbit")] private IWebElement SubmitButton;
 
 
 
-        //
+        public void SubmitForm()
+        {
+            ClickSubmitButton();
+        }
 
+
+
+        private void ClickSubmitButton()
+        {
+            SubmitButton.Click();
+        }
     }
 }
