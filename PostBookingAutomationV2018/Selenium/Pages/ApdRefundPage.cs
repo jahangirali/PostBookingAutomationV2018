@@ -8,12 +8,12 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Selenium.Pages
 {
-    public class ApdRefundRequestPage
+    public class ApdRefundPage
     {
         private IWebDriver Driver { get; }
         private static readonly By PageSelector = By.Id("BookingDetails_BookingReference");
 
-        public ApdRefundRequestPage(IWebDriver driver)
+        public ApdRefundPage(IWebDriver driver)
         {
             Driver = driver;
             PageFactory.InitElements(driver, this);
